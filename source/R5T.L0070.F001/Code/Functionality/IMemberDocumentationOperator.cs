@@ -76,7 +76,7 @@ namespace R5T.L0070.F001
 
         public string Describe(MemberDocumentation memberDocumentation)
         {
-            var memberElementText = Instances.XElementOperator.To_Text_NoModifications(memberDocumentation.MemberElement.Value);
+            var memberElementText = Instances.XElementOperator.To_Text_AsIs(memberDocumentation.MemberElement.Value);
 
             var output = $"{memberDocumentation.IdentityString}:\n{memberDocumentation.DocumentationTarget}\n{memberElementText}\n";
             return output;
