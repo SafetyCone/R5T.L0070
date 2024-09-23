@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using R5T.L0066.Extensions;
 using R5T.L0062.T000;
 using R5T.L0069.T000;
 using R5T.T0132;
@@ -88,7 +89,7 @@ namespace R5T.L0070.F001
                 x => x.Key,
                 x => x.Value.ToArray());
 
-            var memberDocumentationByIdentityName = memberDocumentationByIdentityName_Internal.ToDictionary();
+            var memberDocumentationByIdentityName = memberDocumentationByIdentityName_Internal.To_Dictionary();
 
             return (memberDocumentationByIdentityName, duplicates);
         }
